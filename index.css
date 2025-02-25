@@ -139,6 +139,9 @@ section {
     gap: 20px;
     cursor: pointer;
   }
+  main {
+    padding: 0px 20px;
+  }
 }
 @media (max-width: 480px) {
   .description-slide {

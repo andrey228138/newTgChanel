@@ -14,6 +14,7 @@ header {
   align-items: center;
   gap: 40px;
   cursor: pointer;
+  flex-shrink: initial !important;
 }
 .url-tg {
   font-size: 15px;
@@ -37,21 +38,14 @@ main {
   gap: 40px;
 }
 h2 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 40px;
+  font-weight: 700;
 }
-.name-slide {
-  display: flex;
-  justify-content: left;
-  
 
- width: 50%;
-  cursor: pointer;
-  border-radius: 6px;
-
-}
 .wrapper {
   overflow-x: hidden;
+  overflow-y: hidden;
   padding-top: 10%;
 }
 .button {
@@ -95,27 +89,80 @@ main {
   display: block;
 }
 
-.description-slide{
-    font-size: 20px;
-
+.description-slide {
+  font-size: 20px;
+  max-width: 200px;
 }
-.swiper-pagination{
+.swiper-pagination {
   position: absolute;
-
-
 }
-section{
+section {
   position: relative;
 }
-@media(max-width: 400px){
-  .description-slide{
-    font-size: 16px;
-  
-}
-.swiper-slide {
-  display: flex !important;
+.swiper-wrapper{
+  display: flex;
   align-items: center;
-  gap: 20px;
-  cursor: pointer;
+ 
 }
+@media (max-width: 1920px) {
+  .name-slide {
+    display: flex;
+    justify-content: left;
+
+    width: 208px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  .button-container{
+    display: none;
+  }
+}
+@media (max-width: 1280px) {
+  .swiper-slide {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    cursor: pointer;
+    flex-shrink: 0 !important;
+  }
+  .button-container{
+    display: flex;
+  }
+  .description-slide {
+    font-size: 20px;
+    max-width: 400px;
+  }
+  .swiper-slide {
+    display: flex !important;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 480px) {
+  .description-slide {
+    font-size: 16px;
+  }
+
+  .name-slide {
+    display: flex;
+    justify-content: left;
+
+    width: 50%;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  .description-slide {
+    font-size: 20px;
+    max-width: 200px;
+  }
+  .swiper-slide {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    cursor: pointer;
+    flex-shrink: 0 !important;
+  }
 }
